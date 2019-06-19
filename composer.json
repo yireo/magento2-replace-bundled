@@ -1,0 +1,17 @@
+{
+  "name": "yireo/magento2-replace-bundled",
+  "version": "2.3.1",
+  "replace": {
+    "amzn/amazon-pay-and-login-with-amazon-core-module": "*",
+    "amzn/amazon-pay-module": "*",
+    "amzn/amazon-pay-sdk-php": "*",
+    "amzn/login-with-amazon-module": "*",
+    "dotmailer/dotmailer-magento2-extension": "*",
+    "klarna/module-core": "*",
+    "klarna/module-kp": "*",
+    "klarna/module-ordermanagement": "*",
+    "temando/module-shipping-m2": "*",
+    "vertex/module-tax": "*",
+    "vertex/sdk": "*"
+  }
+}
