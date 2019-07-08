@@ -8,6 +8,7 @@
     "amzn/amazon-pay-sdk-php": "*",
     "amzn/login-with-amazon-module": "*",
     "braintree/braintree_php": "*",
+    "braintree/braintree": "*",
     "dotmailer/dotmailer-magento2-extension": "*",
     "dotmailer/dotmailer-magento2-extension-enterprise": "*",
     "klarna/m2-payments": "*",
