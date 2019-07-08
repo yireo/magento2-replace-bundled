@@ -14,7 +14,7 @@ _Replace `*` with your magento version_
 
 ## Requiments
 
-This package support magento 2.3 or higher.
+This package support Magento 2.3 or higher.
 
 ## Notes
 
