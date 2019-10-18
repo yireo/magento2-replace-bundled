@@ -1,6 +1,6 @@
 {
   "name": "yireo/magento2-replace-bundled",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "replace": {
     "amzn/amazon-pay-and-login-magento-2-module": "*",
     "amzn/amazon-pay-and-login-with-amazon-core-module": "*",
@@ -11,14 +11,18 @@
     "braintree/braintree_php": "*",
     "braintree/braintree": "*",
     "dotmailer/dotmailer-magento2-extension": "*",
+    "dotmailer/dotmailer-magento2-extension-package": "*",
     "dotmailer/dotmailer-magento2-extension-enterprise": "*",
     "klarna/m2-payments": "*",
     "klarna/module-core": "*",
     "klarna/module-kp": "*",
     "klarna/module-ordermanagement": "*",
+    "temando/module-shipping": "*",
     "temando/module-shipping-m2": "*",
     "vertex/product-magento-module": "*",
     "vertex/module-tax": "*",
-    "vertex/sdk": "*"
+    "vertex/sdk": "*",
+    "yotpo/magento2-module-yotpo-reviews": "*",
+    "yotpo/magento2-module-yotpo-reviews-bundle": "*"
   }
 }
