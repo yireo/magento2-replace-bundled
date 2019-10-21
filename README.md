@@ -19,3 +19,7 @@ This package support Magento 2.3 or higher.
 ## Notes
 
 See also the package [`yireo/magento2-replace-all`.](https://github.com/yireo/magento2-replace-all)
+
+### Error editing product
+
+DELETE FROM `eav_attribute` WHERE `source_model` LIKE '%Temando%' 
