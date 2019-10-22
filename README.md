@@ -20,6 +20,7 @@ This package support Magento 2.3 or higher.
 
 See also the package [`yireo/magento2-replace-all`.](https://github.com/yireo/magento2-replace-all)
 
-### Error editing product
+### Exception when editing products
+When you have installed this extension, the `Temando_Shipping` module is removed. However, this extension might have added an EAV attribute already with a specific source model that no longer exists. This could generate an exception `Class Temando\Shipping\Model\Source\PackagingType does not exist`. To fix this, run the following SQL query in your database:
 
-DELETE FROM `eav_attribute` WHERE `source_model` LIKE '%Temando%' 
+  DELETE FROM `eav_attribute` WHERE `source_model` LIKE '%Temando%' 
