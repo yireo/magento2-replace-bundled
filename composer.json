@@ -14,6 +14,7 @@
     "dotmailer/dotmailer-magento2-extension": "*",
     "dotmailer/dotmailer-magento2-extension-package": "*",
     "dotmailer/dotmailer-magento2-extension-enterprise": "*",
+    "dotmailer/dotmailer-magento2-extension-chat": "*",
     "klarna/m2-payments": "*",
     "klarna/module-core": "*",
     "klarna/module-kp": "*",
@@ -23,6 +24,7 @@
     "vertex/product-magento-module": "*",
     "vertex/module-tax": "*",
     "vertex/sdk": "*",
+    "vertex/module-address-validation": "*",
     "yotpo/magento2-module-yotpo-reviews": "*",
     "yotpo/magento2-module-yotpo-reviews-bundle": "*"
   }
