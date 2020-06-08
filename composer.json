@@ -1,5 +1,6 @@
 {
   "name": "yireo/magento2-replace-bundled",
+<<<<<<< HEAD
   "version": "2.3.5",
   "require": {
     "magento/product-community-edition": "2.3.5"
@@ -31,4 +32,7 @@
     "yotpo/magento2-module-yotpo-reviews": "*",
     "yotpo/magento2-module-yotpo-reviews-bundle": "*"
   }
+=======
+  "description": "Checkout a specific branch"
+>>>>>>> 36c39b8766624b51de79d2a98687eb016c7e967f
 }
