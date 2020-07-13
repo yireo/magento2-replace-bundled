@@ -4,7 +4,7 @@ on: [push, pull_request]
 jobs:
   magento-installation:
     name: Magento 2 Test Install
-    runs-on: yireo/magento2base:7.2
+    container: yireo/magento2base:7.2
     services:
       mysql:
         image: mysql:5.7
@@ -21,7 +21,7 @@ jobs:
             MAGENTO_MARKETPLACE_PASSWORD: ${{ secrets.MAGENTO_MARKETPLACE_PASSWORD }}
             COMPOSER_NAME: ${{ secrets.COMPOSER_NAME }}
             MAGENTO_ROOT: /tmp/m2
-            CE_VERSION: 2.3.5
+            CE_VERSION: 2.3.5-p1
         run: |
             mkdir -p $MAGENTO_ROOT && cd $MAGENTO_ROOT &&
             composer global config http-basic.repo.magento.com $MAGENTO_MARKETPLACE_USERNAME $MAGENTO_MARKETPLACE_PASSWORD &&
