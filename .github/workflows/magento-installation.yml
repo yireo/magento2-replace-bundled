@@ -32,5 +32,10 @@ jobs:
             cd $MAGENTO_ROOT &&
             composer config repositories.local-source path local-source/ &&
             composer require $COMPOSER_NAME:@dev --no-update --no-interaction &&
-            COMPOSER_MEMORY_LIMIT=-1 composer install --prefer-dist --no-interaction --no-progress --no-suggest
+            COMPOSER_MEMORY_LIMIT=-1 composer install --prefer-dist --no-interaction --no-progress --no-suggest &&
+            [! -d vendor/vertex ] &&
+            [! -d vendor/klarnae ] &&
+            [! -d vendor/amzn ] &&
+            [! -d vendor/braintree ]
+
 
