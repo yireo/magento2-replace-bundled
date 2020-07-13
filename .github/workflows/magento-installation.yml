@@ -4,6 +4,7 @@ on: [push, pull_request]
 jobs:
   magento-installation:
     name: Magento 2 Test Install
+    runs-on: ubuntu-latest
     container: yireo/magento2base:7.2
     services:
       mysql:
