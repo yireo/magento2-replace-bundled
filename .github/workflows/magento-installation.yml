@@ -47,12 +47,25 @@ jobs:
         run: |
             cd $MAGENTO_ROOT
             COMPOSER_MEMORY_LIMIT=-1 composer install --prefer-dist --no-interaction --no-progress --no-suggest
-      - name: Post-composer tests
+      - name: Magento installation
         env:
             MAGENTO_ROOT: /tmp/m2
         run: |
             cd $MAGENTO_ROOT
-            ls vendor/
-            test -d vendor/vertex && echo "vertex is still there" && exit
-            test -d vendor/klarna && echo "klarna is still there" && exit
+            php -d memory_limit=2G bin/magento setup:install --base-url=http://magento2.test/ \
+                --db-host=mysql --db-name=magento2 \
+                --db-user=root --db-password=root \
+                --admin-firstname=John --admin-lastname=Doe \
+                --admin-email=johndoe@example.com \
+                --admin-user=johndoe --admin-password=johndoe!1234 \
+                --backend-frontname=admin --language=en_US \
+                --currency=USD --timezone=Europe/Amsterdam --cleanup-database \
+                --sales-order-increment-prefix="ORD$" --session-save=db \
+                --use-rewrites=1
+      - name: Magento compilation
+        env:
+            MAGENTO_ROOT: /tmp/m2
+        run: |
+            cd $MAGENTO_ROOT
+            bin/magento setup:di:compile -f
 
