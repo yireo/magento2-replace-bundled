@@ -36,6 +36,7 @@ jobs:
             COMPOSER_NAME: ${{ secrets.COMPOSER_NAME }}
             MAGENTO_ROOT: /tmp/m2
         run: |
+            cd $MAGENTO_ROOT
             mkdir -p $MAGENTO_ROOT/local-source/ && cd $MAGENTO_ROOT/local-source/ && cp -R ${GITHUB_WORKSPACE}/*
             cd $MAGENTO_ROOT
             composer config repositories.local-source path local-source/
@@ -44,11 +45,13 @@ jobs:
         env:
             MAGENTO_ROOT: /tmp/m2
         run: |
+            cd $MAGENTO_ROOT
             COMPOSER_MEMORY_LIMIT=-1 composer install --prefer-dist --no-interaction --no-progress --no-suggest
       - name: Post-composer tests
         env:
             MAGENTO_ROOT: /tmp/m2
         run: |
+            cd $MAGENTO_ROOT
             ! test -d vendor/vertex
             ! test -d vendor/klarnae
             ! test -d vendor/amzn
