@@ -58,5 +58,5 @@ jobs:
       - name: Magento compilation
         run: |
             cd /tmp/m2
-            bin/magento setup:di:compile -f
+            bin/magento setup:di:compile
 
