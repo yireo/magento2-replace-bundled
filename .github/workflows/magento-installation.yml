@@ -52,8 +52,6 @@ jobs:
             MAGENTO_ROOT: /tmp/m2
         run: |
             cd $MAGENTO_ROOT
-            ! test -d vendor/vertex
-            ! test -d vendor/klarnae
-            ! test -d vendor/amzn
-            ! test -d vendor/braintree
+            test -d vendor/vertex && echo "vertex is still there" && exit
+            test -d vendor/klarna && echo "klarna is still there" && exit
 
