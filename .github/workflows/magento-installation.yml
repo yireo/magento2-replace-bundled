@@ -20,7 +20,6 @@ jobs:
         env:
             MAGENTO_MARKETPLACE_USERNAME: ${{ secrets.MAGENTO_MARKETPLACE_USERNAME }}
             MAGENTO_MARKETPLACE_PASSWORD: ${{ secrets.MAGENTO_MARKETPLACE_PASSWORD }}
-            COMPOSER_NAME: ${{ secrets.COMPOSER_NAME }}
             MAGENTO_ROOT: /tmp/m2
             CE_VERSION: 2.3.5-p1
         run: |
@@ -34,6 +33,7 @@ jobs:
             composer create-project --repository=https://repo.magento.com/ magento/project-community-edition:${CE_VERSION} $MAGENTO_ROOT --no-install --no-interaction --no-progress
       - name: Setup local composer package
         env:
+            COMPOSER_NAME: ${{ secrets.COMPOSER_NAME }}
             MAGENTO_ROOT: /tmp/m2
         run: |
             mkdir -p $MAGENTO_ROOT/local-source/ && cd $MAGENTO_ROOT/local-source/ && cp -R ${GITHUB_WORKSPACE}/*
