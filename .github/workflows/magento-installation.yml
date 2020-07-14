@@ -16,7 +16,7 @@ jobs:
         options: --tmpfs /tmp:rw --tmpfs /var/lib/mysql:rw --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     steps:
       - uses: actions/checkout@v2
-      - name: Composer installation
+      - name: Composer preparation
         env:
             MAGENTO_MARKETPLACE_USERNAME: ${{ secrets.MAGENTO_MARKETPLACE_USERNAME }}
             MAGENTO_MARKETPLACE_PASSWORD: ${{ secrets.MAGENTO_MARKETPLACE_PASSWORD }}
@@ -24,18 +24,33 @@ jobs:
             MAGENTO_ROOT: /tmp/m2
             CE_VERSION: 2.3.5-p1
         run: |
-            mkdir -p $MAGENTO_ROOT && cd $MAGENTO_ROOT &&
-            composer global config http-basic.repo.magento.com $MAGENTO_MARKETPLACE_USERNAME $MAGENTO_MARKETPLACE_PASSWORD &&
-            composer global require hirak/prestissimo &&
-            composer create-project --repository=https://repo.magento.com/ magento/project-community-edition:${CE_VERSION} $MAGENTO_ROOT --no-install --no-interaction --no-progress &&
-            mkdir -p $MAGENTO_ROOT/local-source/ && cd $MAGENTO_ROOT/local-source/ && cp -R ${GITHUB_WORKSPACE}/* &&
-            cd $MAGENTO_ROOT &&
-            composer config repositories.local-source path local-source/ &&
-            composer require $COMPOSER_NAME:@dev --no-update --no-interaction &&
-            COMPOSER_MEMORY_LIMIT=-1 composer install --prefer-dist --no-interaction --no-progress --no-suggest &&
-            [! -d vendor/vertex ] &&
-            [! -d vendor/klarnae ] &&
-            [! -d vendor/amzn ] &&
-            [! -d vendor/braintree ]
-
+            mkdir -p $MAGENTO_ROOT && cd $MAGENTO_ROOT
+            composer global config http-basic.repo.magento.com $MAGENTO_MARKETPLACE_USERNAME $MAGENTO_MARKETPLACE_PASSWORD
+            composer global require hirak/prestissimo
+      - name: Creating Magento composer project
+        env:
+            MAGENTO_ROOT: /tmp/m2
+        run: |
+            composer create-project --repository=https://repo.magento.com/ magento/project-community-edition:${CE_VERSION} $MAGENTO_ROOT --no-install --no-interaction --no-progress
+      - name: Setup local composer package
+        env:
+            MAGENTO_ROOT: /tmp/m2
+        run: |
+            mkdir -p $MAGENTO_ROOT/local-source/ && cd $MAGENTO_ROOT/local-source/ && cp -R ${GITHUB_WORKSPACE}/*
+            cd $MAGENTO_ROOT
+            composer config repositories.local-source path local-source/
+            composer require $COMPOSER_NAME:@dev --no-update --no-interaction
+      - name: Composer installation
+        env:
+            MAGENTO_ROOT: /tmp/m2
+        run: |
+            COMPOSER_MEMORY_LIMIT=-1 composer install --prefer-dist --no-interaction --no-progress --no-suggest
+      - name: Post-composer tests
+        env:
+            MAGENTO_ROOT: /tmp/m2
+        run: |
+            ! test -d vendor/vertex
+            ! test -d vendor/klarnae
+            ! test -d vendor/amzn
+            ! test -d vendor/braintree
 
