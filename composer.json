@@ -1,7 +1,7 @@
 {
   "name": "yireo/magento2-replace-bundled",
   "require": {
-    "magento/product-community-edition": "2.3.1"
+    "magento/product-community-edition": "~2.3.1"
   },
   "replace": {
     "amzn/amazon-pay-and-login-magento-2-module": "*",
