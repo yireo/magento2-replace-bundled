@@ -1,4 +1,34 @@
 {
   "name": "yireo/magento2-replace-bundled",
-  "description": "Checkout a specific branch"
+  "require": {
+    "magento/product-community-edition": "~2.4.0"
+  },
+  "replace": {
+    "amzn/amazon-pay-and-login-magento-2-module": "*",
+    "amzn/amazon-pay-and-login-with-amazon-core-module": "*",
+    "amzn/amazon-pay-module": "*",
+    "amzn/amazon-pay-sdk-php": "*",
+    "amzn/login-with-amazon-module": "*",
+    "magento/module-braintree": "*",
+    "magento/module-braintree-graph-ql": "*",
+    "braintree/braintree_php": "*",
+    "braintree/braintree": "*",
+    "dotmailer/dotmailer-magento2-extension": "*",
+    "dotmailer/dotmailer-magento2-extension-package": "*",
+    "dotmailer/dotmailer-magento2-extension-enterprise": "*",
+    "dotmailer/dotmailer-magento2-extension-chat": "*",
+    "klarna/m2-payments": "*",
+    "klarna/module-core": "*",
+    "klarna/module-kp": "*",
+    "klarna/module-ordermanagement": "*",
+    "temando/module-shipping": "*",
+    "temando/module-shipping-m2": "*",
+    "temando/module-shipping-remover": "*",
+    "vertex/product-magento-module": "*",
+    "vertex/module-tax": "*",
+    "vertex/sdk": "*",
+    "vertex/module-address-validation": "*",
+    "yotpo/magento2-module-yotpo-reviews": "*",
+    "yotpo/magento2-module-yotpo-reviews-bundle": "*"
+  }
 }
