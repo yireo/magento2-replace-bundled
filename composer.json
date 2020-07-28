@@ -21,6 +21,7 @@
     "klarna/module-core": "*",
     "klarna/module-kp": "*",
     "klarna/module-ordermanagement": "*",
+    "paypal/module-braintree": "*",
     "paypal/module-braintree-core": "*",
     "paypal/module-braintree-graph-ql": "*",
     "temando/module-shipping": "*",
