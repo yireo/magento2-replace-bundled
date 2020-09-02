@@ -18,6 +18,7 @@
     "dotmailer/dotmailer-magento2-extension-package": "*",
     "dotmailer/dotmailer-magento2-extension-enterprise": "*",
     "dotmailer/dotmailer-magento2-extension-chat": "*",
+    "dotmailer/dotmailer-magento2-extension-b2b": "*",
     "klarna/m2-payments": "*",
     "klarna/module-core": "*",
     "klarna/module-kp": "*",
