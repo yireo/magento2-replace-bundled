@@ -31,6 +31,7 @@
     "temando/module-shipping-m2": "*",
     "temando/module-shipping-remover": "*",
     "vertex/product-magento-module": "*",
+    "vertex/module-address-validation-api": "*",
     "vertex/module-tax": "*",
     "vertex/sdk": "*",
     "vertex/module-address-validation": "*",
