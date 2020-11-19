@@ -22,6 +22,7 @@
     "klarna/m2-payments": "*",
     "klarna/module-core": "*",
     "klarna/module-kp": "*",
+    "klarna/module-kp-graph-ql": "*",
     "klarna/module-ordermanagement": "*",
     "klarna/module-onsitemessaging": "*",
     "paypal/module-braintree": "*",
