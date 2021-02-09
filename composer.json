@@ -36,6 +36,7 @@
     "vertex/module-tax": "*",
     "vertex/sdk": "*",
     "vertex/module-address-validation": "*",
+    "vertex/module-tax-staging": "*",
     "yotpo/magento2-module-yotpo-reviews": "*",
     "yotpo/magento2-module-yotpo-reviews-bundle": "*"
   }
