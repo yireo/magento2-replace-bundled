@@ -33,6 +33,7 @@
     "temando/module-shipping-remover": "*",
     "vertex/product-magento-module": "*",
     "vertex/module-tax": "*",
+    "vertex/module-tax-staging": "*",
     "vertex/sdk": "*",
     "vertex/module-address-validation": "*",
     "yotpo/magento2-module-yotpo-reviews": "*",
