@@ -2,7 +2,7 @@
   "name": "yireo/magento2-replace-bundled",
   "description": "Replace bundled third party packages from Magento",
   "require": {
-    "magento/product-community-edition": ">=2.4.0 <2.4.3"
+    "magento/product-community-edition": ">=2.4.0 <2.4.4"
   },
   "replace": {
     "amzn/amazon-pay-and-login-magento-2-module": "*",
@@ -17,6 +17,7 @@
     "dotmailer/dotmailer-magento2-extension": "*",
     "dotmailer/dotmailer-magento2-extension-package": "*",
     "dotmailer/dotmailer-magento2-extension-enterprise": "*",
+    "dotmailer/dotmailer-magento2-extension-enterprise-package": "*",
     "dotmailer/dotmailer-magento2-extension-chat": "*",
     "dotmailer/dotmailer-magento2-extension-b2b": "*",
     "dotmailer/dotmailer-magento2-extension-sms": "*",
@@ -35,6 +36,9 @@
     "vertex/product-magento-module": "*",
     "vertex/module-tax": "*",
     "vertex/sdk": "*",
+    "vertexinc/module-tax-staging": "*",
+    "vertexinc/product-magento-module": "*",
+    "vertexinc/product-magento-module-commerce": "*",
     "vertex/module-address-validation": "*",
     "vertex/module-tax-staging": "*",
     "yotpo/magento2-module-yotpo-reviews": "*",
