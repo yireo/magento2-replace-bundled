@@ -29,6 +29,9 @@
     "vertex/module-tax": "*",
     "vertex/sdk": "*",
     "vertex/module-address-validation": "*",
+    "vertexinc/module-tax-staging": "*",
+    "vertexinc/product-magento-module": "*",
+    "vertexinc/product-magento-module-commerce": "*",
     "yotpo/magento2-module-yotpo-reviews": "*",
     "yotpo/magento2-module-yotpo-reviews-bundle": "*"
   }
