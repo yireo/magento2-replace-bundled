@@ -23,8 +23,10 @@ jobs:
         env:
             MAGENTO_MARKETPLACE_USERNAME: ${{ secrets.MAGENTO_MARKETPLACE_USERNAME }}
             MAGENTO_MARKETPLACE_PASSWORD: ${{ secrets.MAGENTO_MARKETPLACE_PASSWORD }}
+            COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
             mkdir -p /tmp/m2 && cd /tmp/m2
+            composer global config github-oauth.github.com $COMPOSER_TOKEN
             composer global config http-basic.repo.magento.com $MAGENTO_MARKETPLACE_USERNAME $MAGENTO_MARKETPLACE_PASSWORD
       - name: Creating Magento composer project
         run: |
@@ -36,7 +38,7 @@ jobs:
             COMPOSER_NAME: ${{ secrets.COMPOSER_NAME }}
         run: |
             MAGENTO_VERSION=`cat ${GITHUB_WORKSPACE}/.github/workflows/magento_version.txt`
-            BRANCH=magento-${MAGENTO_VERSION/-p*/}
+            BRANCH=magento-`echo $MAGENTO_VERSION | cut -f'1-2' -d\.`
             test -z "$MAGENTO_VERSION" && exit 1
             cd /tmp/m2
             ln -s ${GITHUB_WORKSPACE} local-source
