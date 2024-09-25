@@ -29,6 +29,9 @@
     "klarna/module-onsitemessaging": "*",
     "paypal/module-braintree": "*",
     "paypal/module-braintree-core": "*",
+    "paypal/module-braintree-customer-balance": "*",
+    "paypal/module-braintree-gift-card-account": "*",
+    "paypal/module-braintree-gift-wrapping": "*"
     "paypal/module-braintree-graph-ql": "*",
     "temando/module-shipping": "*",
     "temando/module-shipping-m2": "*",
