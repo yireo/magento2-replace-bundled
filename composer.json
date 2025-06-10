@@ -27,7 +27,6 @@
     "klarna/module-kp-graph-ql": "*",
     "klarna/module-ordermanagement": "*",
     "klarna/module-onsitemessaging": "*",
-    "paypal/module-braintree": "*",
     "paypal/module-braintree-core": "*",
     "paypal/module-braintree-customer-balance": "*",
     "paypal/module-braintree-gift-card-account": "*",
