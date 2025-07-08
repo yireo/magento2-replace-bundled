@@ -21,6 +21,7 @@
     "dotmailer/dotmailer-magento2-extension-chat": "*",
     "dotmailer/dotmailer-magento2-extension-b2b": "*",
     "dotmailer/dotmailer-magento2-extension-sms": "*",
+    "hyva-themes/magento2-mollie-theme-bundle": "*",
     "klarna/m2-payments": "*",
     "klarna/module-core": "*",
     "klarna/module-kp": "*",
