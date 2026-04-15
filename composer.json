@@ -38,6 +38,7 @@
     "paypal/module-braintree-reward": "*",
     "temando/module-shipping": "*",
     "temando/module-shipping-m2": "*",
+    "temando/module-shipping-remover": "*",
     "vertex/module-address-validation": "*",
     "vertex/module-tax": "*",
     "vertex/module-tax-staging": "*",
