@@ -28,7 +28,6 @@
     "klarna/module-ordermanagement": "*",
     "magento/module-braintree": "*",
     "magento/module-braintree-graph-ql": "*",
-    "paypal/module-braintree": "*",
     "paypal/module-braintree-core": "*",
     "paypal/module-braintree-customer-balance": "*",
     "paypal/module-braintree-gift-card": "*",
